@@ -5,7 +5,10 @@ package controladores;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
 import dto.LibroDto;
+import servicios.FicherosImplementacion;
+import servicios.FicherosInterfaz;
 import servicios.MenusImplementacion;
 import servicios.MenusInterfaz;
 import servicios.OperativaImplementacion;
@@ -21,6 +24,9 @@ public class Inicio {
 		
 		MenusInterfaz menu = new MenusImplementacion();
 		OperativaInterfaz operativa = new OperativaImplementacion();
+		FicherosInterfaz fichero = new FicherosImplementacion();
+		
+		fichero.cargaArchivo();
 		
 		boolean cerrar = false;
 		
@@ -50,6 +56,7 @@ public class Inicio {
 			
 			case 3:
 				System.out.println("Aplicacion cerrada.");
+				fichero.escribirFichero();
 				cerrar = true;
 				break;
 			}

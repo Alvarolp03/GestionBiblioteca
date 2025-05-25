@@ -56,6 +56,7 @@ public class OperativaImplementacion implements OperativaInterfaz {
 		}
 	}
 	
+	
 	@Override
 	public void listarLibro() {
 		
