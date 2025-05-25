@@ -56,6 +56,21 @@ public class OperativaImplementacion implements OperativaInterfaz {
 		}
 	}
 	
+	public void buscarLibro() {
+		
+		System.out.println("Introduce el ISBN del libro: ");
+		long isbn = Inicio.scanner.nextLong();
+		
+		for(LibroDto libro : Inicio.libro) {
+			
+			if(libro.getIsbn() == isbn) {
+				
+				System.out.println(libro.toString());
+			}
+			
+		}
+		
+	}
 	
 	@Override
 	public void listarLibro() {

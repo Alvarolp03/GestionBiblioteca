@@ -52,6 +52,7 @@ public class Inicio {
 				break;
 			
 			case 2: 
+				operativa.buscarLibro();
 				break;
 			
 			case 3:
